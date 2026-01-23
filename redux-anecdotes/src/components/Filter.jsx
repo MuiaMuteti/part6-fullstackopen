@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux'
-import { filterChange } from '../reducers/filterReducer'
+import { setFilter } from '../reducers/filterReducer'
 
 const Filter = () => {
     const dispatch = useDispatch()
     const handleChange = event => {        
         const filter = event.target.value
         console.log(filter)
-        dispatch(filterChange(filter.trim().toLowerCase()))
+        dispatch(setFilter(filter.trim().toLowerCase()))
     }
 
     const style = {
